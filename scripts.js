@@ -1,14 +1,17 @@
-$(document).ready(function(){
-    // Smooth scrolling
-    $('nav a').on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-                window.location.hash = hash;
+document.addEventListener("DOMContentLoaded", function() {
+    // Example of adding more interactivity with JavaScript
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            let target = document.querySelector(this.getAttribute('href'));
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: "smooth"
             });
-        }
+        });
     });
+
+    // Additional JavaScript can be added here to enhance interactivity
+    // For example, loading projects dynamically, form validation, etc.
 });
