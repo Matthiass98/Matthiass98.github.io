@@ -17,14 +17,19 @@ header {
     background: #333;
     color: #fff;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.profile-pic {
-    width: 100px; /* Adjust width as necessary */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 50%; /* Circular image */
-    display: block;
-    margin: 0 auto 20px; /* Centers the image and adds space below */
+.header-content h1, .header-content p {
+    margin: 0;
+    text-align: left;
+}
+
+.linkedin-logo {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
 }
 
 nav ul {
@@ -53,15 +58,7 @@ nav ul li a:hover {
 }
 
 section {
-    background: #fff; /* Add a background color */
-    padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px; /* Optional: adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
-    max-width: 800px; /* Adjust as needed */
-    margin-left: auto;
-    margin-right: auto; /* Centers the section */
-    text-align: left; /* Aligns text to the left */
 }
 
 footer {
@@ -78,10 +75,5 @@ footer {
     nav ul li {
         display: block;
         margin: 5px 0;
-    }
-
-    section {
-        max-width: 100%; /* Ensures the section uses full width on smaller screens */
-        padding: 15px; /* Slightly reduces padding on smaller screens */
     }
 }
